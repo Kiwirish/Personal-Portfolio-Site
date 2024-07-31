@@ -100,7 +100,7 @@ section{
 
 .media-icons a{
   color: #1cc8e3;
-  font-size: 25px;
+  font-size: 40px;
   margin-right: 30px;
 }
 
@@ -239,8 +239,7 @@ body{
 }
 
 .skills{
-  background: #000016;
-}
+    background: url(images/cool-background.png) repeat;}
 
 .skills .content{
   position: relative;
@@ -372,7 +371,7 @@ body{
 }
 
 .work{
-  background: #000016;
+    background: url(images/cool-background.png) repeat;
 }
 
 .work .content{
