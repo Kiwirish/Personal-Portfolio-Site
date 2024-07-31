@@ -322,7 +322,24 @@ body{
   width: 75%;
   background: #6d7eb8;
 }
-
+.maintenance {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50px; /* Adjust as necessary */
+  }
+  
+  .maintenance h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  
+  .maintenance p {
+    font-size: 18px;
+  }
+  
 .services .content{
   display: flex;
   justify-content: center;
@@ -520,7 +537,7 @@ body{
 }
 
 .footer{
-  background: #000016;
+  background: url(images/cool-background.png) repeat;
   color: #fff;
   text-align: center;
   padding: 2em;
