@@ -243,7 +243,7 @@ body{
 }
 
 .about .content .col-right .paragraph-text{
-  font-size: 1em;
+  font-size: 1.3em;
 }
 
 .skills{
@@ -353,7 +353,7 @@ body{
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .title p{
@@ -890,4 +890,7 @@ body{
   .content-sections {
     flex-direction: column;
   }
+}
+.services {
+  padding-top: 20px; /* Reduced from 100px */
 }

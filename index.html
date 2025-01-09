@@ -19,8 +19,6 @@
       <div class="navigation">
         <a href="#main">Home</a>
         <a href="#about">About</a>
-        <a href="#skills">Experience</a>
-        <a href="#services">What I'm Upto</a>
         <a href="#work">Projects</a>
         <a href="#contact">Contact</a>
       </div>
@@ -58,8 +56,42 @@
         </div>
         <div class="column col-right reveal">
           <h2 class="content-title">Hey There! I'm Blake Leahy</h2>
-          <p class="paragraph-text">I am a final-year Computer Science student at the University of Otago, with experience in IT and a keen interest in various areas of computer science. I am passionate about developing robust tech solutions and am looking for opportunities to learn and grow in different fields of computer science.<br><br>Currently, I am working as an IT Intern with the University of Otago's Digital Workspace Deployment Team, where I deploy managed computers across the university, working between logistics, deployments and communications. I thrive under these dynamic, team focused environments and am so excited to explore the tech industry further!</p>
+          <p class="paragraph-text">I am a recent graduate of the University of Otago, graduating with a BSc majoring Computer Science & minoring Information Science in December 2024. I’m passionate about building innovative tech solutions for real world problems and continuously expanding my development knowledge.<br><br>With a solid foundation in both theoretical computer science and practical IT experience, i’m now focusing on modern web development and cloud technologies. My background in IT operations has offered me valuable insights into enterprise-level systems, while my software development projects demonstrate my ability to architect, implement and learn new full-stack solutions.</p>
           <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <div class="title reveal">
+        <p></p>
+      </div>
+      <div class="content">
+        <div class="card reveal">
+          <div class="service-icon">
+            <i class="fas fa-laptop"></i>
+          </div>
+          <div class="info">
+            <h3>Exploring Modern Web Development</h3>
+            <p>I am currently deep diving into the MERN (MongoDB, Express.js, React, Node.js) stack, building on my experience with LAMP stack development. I am committed to staying up-to-date on industry-leading tech and expanding my abilities!</p>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="service-icon">
+            <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="info">
+            <h3>Recent Graduate</h3>
+            <p>Having completed my BSc in Computer Science with a minor in Information Science from the University of Otago, I am now seeking opportunities to apply my technical skills in a professional development role.</p>
+          </div>
+        </div>              
+        <div class="card reveal2">
+          <div class="service-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <div class="info">
+            <h3>Previous Experience</h3>
+            <p>I recently completed an IT Internship with the University of Otago's Digital Workspace project team, where I gained valuable experience with enterprise IT operations, team collaboration and project delivery.  </p>
+          </div>
         </div>
       </div>
     </section>
@@ -114,6 +146,7 @@
       </div>
     </section>
 -->
+<!--
     <section class="skills" id="skills">
         <div class="title reveal">
         <h2 class="section-title">Under Maintenance</h2>
@@ -159,7 +192,7 @@
         </div>
       </div>
     </section>
-
+  -->
     <!-- ... existing code ... -->
 
 <section class="work" id="work">
@@ -225,7 +258,7 @@
 </section>
 
 <div class="rogue-waves-invite">
-  <h3>Want to try <strong>Rogue Waves</strong>?</h3>
+  <h3>Want to try my game, <strong>'Rogue Waves'</strong>?</h3>
   <p>Play the 2D action-adventure game directly in your browser!</p>
   <a href="roguewaves.html" class="btn">Play Now!</a>
 </div>
@@ -296,19 +329,22 @@
         </div>
         <div class="row">
           <div class="contact-form reveal">
-            <h3>Send Message (broken)</h3>
-            <div class="input-box">
-              <input type="text" name="" value="" placeholder="Name">
-            </div>
-            <div class="input-box">
-              <input type="text" name="" value="" placeholder="Email">
-            </div>
-            <div class="input-box">
-              <input type="text" name="" value="" placeholder="Message">
-            </div>
-            <div class="input-box">
-              <input type="submit" class="send-btn" name="" value="Send"/>
-            </div>
+            <form action="mailto:blakeleahy7@gmail.com" method="post" enctype="text/plain">
+              <h3>Send Message</h3>
+              <div class="input-box">
+                <input type="text" name="name" placeholder="Name" />
+              </div>
+              <div class="input-box">
+                <input type="email" name="email" placeholder="Email" />
+              </div>
+              <div class="input-box">
+                <!-- Use a textarea if you want a bigger message box -->
+                <textarea name="message" placeholder="Message"></textarea>
+              </div>
+              <div class="input-box">
+                <input type="submit" class="send-btn" value="Send Email" />
+              </div>
+            </form>
           </div>
         </div>
       </div>
