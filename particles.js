@@ -20,10 +20,12 @@ function resizeCanvas() {
     canvas.height = window.innerHeight;
 }
 
-// Function to get all blue section positions
+// Function to get all sections that should have white particles (blue background sections)
+// Function to get all sections that should have white particles (blue background sections)
 function updateBlueSections() {
     blueSections = [];
-    const sections = document.querySelectorAll('.blue-section');
+    // Look for sections that have the cool-background.png (these should have white particles)
+    const sections = document.querySelectorAll('.main, .work, .footer');
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();
         blueSections.push({
@@ -177,9 +179,31 @@ function drawConnections() {
     }
 }
 
-// Draw mouse connections
+// Add this function to detect if mouse is over interactive content
+function isMouseOverContent(x, y) {
+    const element = document.elementFromPoint(x, y);
+    if (!element) return false;
+    
+    // Check if mouse is over any content that should have priority
+    return element.closest('.card') ||
+           element.closest('.btn') ||
+           element.closest('img') ||
+           element.closest('.popup-box') ||
+           element.closest('input') ||
+           element.closest('textarea') ||
+           element.closest('a') ||
+           element.closest('.media-icons') ||
+           element.closest('.contact-form') ||
+           element.tagName === 'BUTTON' ||
+           element.classList.contains('card-img');
+}
+
+// Replace your existing drawMouseConnections function with this:
 function drawMouseConnections() {
     if (!config.mouseAttraction) return;
+    
+    // Only show mouse particle effects when NOT over content
+    if (isMouseOverContent(mouse.x, mouse.y)) return;
 
     particles.forEach(particle => {
         const dx = mouse.x - particle.x;
@@ -205,7 +229,7 @@ function drawMouseConnections() {
         }
     });
 
-    // Draw mouse cursor
+    // Draw mouse cursor only when not over content
     const isOverBlue = isOverBlueSection(mouse.x, mouse.y);
     const gradient = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 20);
 
@@ -270,7 +294,29 @@ function toggleMouseAttraction() {
 }
 
 // Initialize
-resizeCanvas();
-initParticles();
-updateBlueSections();
-animate();
+// resizeCanvas();
+// initParticles();
+// updateBlueSections();
+// animate();
+// Initialize with proper timing
+document.addEventListener('DOMContentLoaded', () => {
+    // Wait for everything to load
+    setTimeout(() => {
+        resizeCanvas();
+        initParticles();
+        updateBlueSections();
+        animate();
+        
+        // Update sections again after a short delay to ensure proper detection
+        setTimeout(() => {
+            updateBlueSections();
+        }, 500);
+    }, 100);
+});
+
+// Also update when window loads
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        updateBlueSections();
+    }, 200);
+});
